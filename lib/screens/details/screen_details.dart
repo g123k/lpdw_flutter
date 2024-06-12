@@ -20,9 +20,9 @@ class ProductDetails extends StatefulWidget {
   final ProductDetailsArgs args;
 
   const ProductDetails({
-    Key? key,
+    super.key,
     required this.args,
-  }) : super(key: key);
+  });
 
   @override
   State<ProductDetails> createState() => _ProductDetailsState();
@@ -93,7 +93,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                           tooltip: 'Partager',
                           onPressed: () {
                             Share.share(
-                              'https://fr.openfoodfacts.org/produit/${(state as LoadedProductState).product.barcode})}',
+                              'https://fr.openfoodfacts.org/produit/${(state).product.barcode})}',
                             );
                           },
                         );
@@ -116,7 +116,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                       });
                     }
                   },
-                  items: ProductDetailsTab.values.map((e) {
+                  items: ProductDetailsTab.values.map((ProductDetailsTab e) {
                     String? label;
                     IconData? icon;
 
@@ -124,22 +124,15 @@ class _ProductDetailsState extends State<ProductDetails> {
                       case ProductDetailsTab.info:
                         icon = AppIcons.tab_barcode;
                         label = "Fiche";
-                        break;
                       case ProductDetailsTab.nutritionalValues:
                         icon = AppIcons.tab_fridge;
                         label = "Caractéristiques";
-                        break;
                       case ProductDetailsTab.nutrition:
                         icon = AppIcons.tab_nutrition;
                         label = "Nutrition";
-                        break;
                       case ProductDetailsTab.summary:
                         icon = AppIcons.tab_array;
                         label = "Tableau";
-                    }
-
-                    if (label == null || icon == null) {
-                      throw Exception("Tab $e not implemented!");
                     }
 
                     return BottomNavigationBarItem(
@@ -183,9 +176,7 @@ class ProductDetailsError extends StatelessWidget {
 }
 
 class _ProductDetailsLoading extends StatelessWidget {
-  const _ProductDetailsLoading({
-    super.key,
-  });
+  const _ProductDetailsLoading();
 
   @override
   Widget build(BuildContext context) {

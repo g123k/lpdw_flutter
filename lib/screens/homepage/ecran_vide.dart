@@ -6,8 +6,8 @@ import 'package:lpdw_flutter/res/app_vectorial_images.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -49,9 +49,7 @@ class HomePage extends StatelessWidget {
 }
 
 class _EmptyScreenAppBarBarcodeAction extends StatelessWidget {
-  const _EmptyScreenAppBarBarcodeAction({
-    Key? key,
-  }) : super(key: key);
+  const _EmptyScreenAppBarBarcodeAction();
 
   @override
   Widget build(BuildContext context) {
@@ -71,9 +69,7 @@ class _EmptyScreenAppBarBarcodeAction extends StatelessWidget {
 }
 
 class _EmptyScreenIllustration extends StatelessWidget {
-  const _EmptyScreenIllustration({
-    Key? key,
-  }) : super(key: key);
+  const _EmptyScreenIllustration();
 
   @override
   Widget build(BuildContext context) {
@@ -85,9 +81,7 @@ class _EmptyScreenIllustration extends StatelessWidget {
 }
 
 class _EmptyScreenMessage extends StatelessWidget {
-  const _EmptyScreenMessage({
-    Key? key,
-  }) : super(key: key);
+  const _EmptyScreenMessage();
 
   @override
   Widget build(BuildContext context) {
@@ -103,8 +97,7 @@ class _EmptyScreenButton extends StatelessWidget {
 
   const _EmptyScreenButton({
     this.onPressed,
-    Key? key,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

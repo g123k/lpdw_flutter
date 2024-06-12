@@ -16,12 +16,12 @@ class AppColors {
   static const Color nutrientKevelModerate = Color(0xFF997B3F);
   static const Color nutrientLevelHigh = Color(0xFF993F3F);
   static const Color nutriscoreA = Color(0xFF008b4c);
-  static const Color nutriscoreB = Color(0xFFc142);
+  static const Color nutriscoreB = Color(0xFFFFc142);
   static const Color nutriscoreC = Color(0xFFfeca0b);
   static const Color nutriscoreD = Color(0xFFf58220);
   static const Color nutriscoreE = Color(0xFFef3e22);
   static const Color ecoScoreA = Color(0xFF1E8F4E);
-  static const Color ecoScoreB = Color(0xFFCC71);
+  static const Color ecoScoreB = Color(0xFFFFCC71);
   static const Color ecoScoreC = Color(0xFFFFC900);
   static const Color ecoScoreD = Color(0xFFEF7E1A);
   static const Color ecoScoreE = Color(0xFFE62D19);

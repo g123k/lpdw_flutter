@@ -9,7 +9,7 @@ import 'package:lpdw_flutter/screens/details/product_bloc.dart';
 class ProductInfo extends StatefulWidget {
   static const double kImageHeight = 300.0;
 
-  const ProductInfo({Key? key}) : super(key: key);
+  const ProductInfo({super.key});
 
   @override
   State<ProductInfo> createState() => _ProductInfoState();
@@ -83,6 +83,7 @@ class _HeaderIcon extends StatefulWidget {
 
   const _HeaderIcon({
     required this.icon,
+    // ignore: unused_element
     this.tooltip,
     // ignore: unused_element
     this.onPressed,
@@ -147,7 +148,7 @@ class _Body extends StatelessWidget {
   static const double _kHorizontalPadding = 20.0;
   static const double _kVerticalPadding = 30.0;
 
-  const _Body({Key? key}) : super(key: key);
+  const _Body();
 
   @override
   Widget build(BuildContext context) {
@@ -159,9 +160,9 @@ class _Body extends StatelessWidget {
           topEnd: Radius.circular(16.0),
         ),
       ),
-      child: Column(
+      child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
+        children: [
           Padding(
             padding: EdgeInsets.symmetric(
               horizontal: _kHorizontalPadding,
@@ -184,7 +185,7 @@ class _Body extends StatelessWidget {
 }
 
 class _Header extends StatelessWidget {
-  const _Header({Key? key}) : super(key: key);
+  const _Header();
 
   @override
   Widget build(BuildContext context) {
@@ -230,7 +231,7 @@ class _Scores extends StatelessWidget {
   static const double _horizontalPadding = _Body._kHorizontalPadding;
   static const double _verticalPadding = 18.0;
 
-  const _Scores({Key? key}) : super(key: key);
+  const _Scores();
 
   @override
   Widget build(BuildContext context) {
@@ -300,8 +301,7 @@ class _Nutriscore extends StatelessWidget {
 
   const _Nutriscore({
     required this.nutriscore,
-    Key? key,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -347,8 +347,7 @@ class _NovaGroup extends StatelessWidget {
 
   const _NovaGroup({
     required this.novaScore,
-    Key? key,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -396,8 +395,7 @@ class _EcoScore extends StatelessWidget {
 
   const _EcoScore({
     required this.ecoScore,
-    Key? key,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -484,27 +482,27 @@ class _EcoScore extends StatelessWidget {
 }
 
 class _Info extends StatelessWidget {
-  const _Info({Key? key}) : super(key: key);
+  const _Info();
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        const _ProductItemValue(
+        _ProductItemValue(
           label: 'Quantité',
           value: '200g (égoutté 130g)',
         ),
-        const _ProductItemValue(
+        _ProductItemValue(
           label: 'Vendu',
           value: 'France',
           includeDivider: false,
         ),
-        const SizedBox(
+        SizedBox(
           height: 15.0,
         ),
         Row(
-          children: const [
+          children: [
             Expanded(
               flex: 40,
               child: _ProductBubble(
@@ -538,8 +536,7 @@ class _ProductItemValue extends StatelessWidget {
     required this.label,
     required this.value,
     this.includeDivider = true,
-    Key? key,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -577,8 +574,7 @@ class _ProductBubble extends StatelessWidget {
   final String label;
   final _ProductBubbleValue value;
 
-  const _ProductBubble({required this.label, required this.value, Key? key})
-      : super(key: key);
+  const _ProductBubble({required this.label, required this.value});
 
   @override
   Widget build(BuildContext context) {
